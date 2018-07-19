@@ -1,3 +1,15 @@
+@import url("helper.css");
+@import url("mouse_scroll.css");
+html,
+body {
+	height: 100%;
+	min-width: 320px;
+}
+
+body {
+	font-family: 'Noto Sans';
+}
+/*-------------Helpers--------------*/
 .block {
 	height: 30px;
 	background-color: yellow;
@@ -9,14 +21,174 @@
 	text-transform: uppercase;	
 }
 
-.header {
-	background-color: blue;
-}
-
 .contacts {
 	background-color: blue;
 }
 
 .copirait {
 	background-color: DarkBlue;
+}
+
+.max-heigth {
+	height: 100%;
+}
+
+/*---------Header-----------*/
+.header {
+	height: 390px;
+	background-image: url("../img/bg/dorin-vancea-83926.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	text-align: center;
+	color: #FFF;
+	padding-top: 50px;
+	opacity: 0.85;
+}
+
+@media (min-width: 768px) {
+	.header {
+		height: 560px;
+	}
+}
+@media (min-width: 1200px) {
+	.header {
+		height: 800px;
+	}
+}
+
+/*------------Navigation------------*/
+.navigation {
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.navigation ul li {
+	margin-bottom: 40px;
+}
+
+.navigation ul li a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.navigation ul li a:hover,
+.navigation ul li a:focus,
+.navigation ul li a:active {
+	text-decoration: none;
+	color: #ffe400;
+} 
+
+/*-----------Mobile navigation------------*/
+.navigation__toggle {
+	font-size: 38px;
+	position: absolute;
+	top: -22px;
+	right: 15px;
+	z-index: 2;
+}
+
+.navigation__toggle--fixed {
+	position: fixed;
+	top: 28px;
+	right: 15px;
+}
+
+.navigation__list {
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.navigation__list--open {
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	z-index: 1;
+	position: fixed;
+	background-color: rgba(11, 81, 136, .95);
+	top: 0px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+@media (min-width: 768px) {
+	.navigation__list {
+		display: block;
+		position: static;
+		background-color: transparent;
+	}
+	.navigation__toggle {
+		display: none;
+	}
+	.navigation ul li {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	margin-right: 100px;
+	}
+
+.navigation ul li:last-child {
+	margin-right: 0;
+	}
+}
+
+/*------------User Photo------------*/
+.user-photo {
+	overflow: hidden;
+	width: 110px;
+	height: 110px;
+	margin: 0 auto 27px;
+	-webkit-border-radius: 80px;
+	        border-radius: 80px;
+	background-image: url("../img/placeholders/user-avatar-placeholder-small.jpg_19.png");
+
+}
+.user-photo--shadow {
+	-webkit-box-shadow: 0px 0px 40px 0px rgba(72, 119, 159, 0.8);
+	        box-shadow: 0px 0px 40px 0px rgba(72, 119, 159, 0.8);	
+}
+
+/*------------Header Title--------------*/
+.header__title{
+	font-size: 26px;
+	font-weight: 700;
+	text-shadow: 0px 0px 40px rgba(72, 119, 159, 0.8);
+}
+
+.header__subtitle {
+	font-size: 18px;
+	font-weight: 700;
+	text-shadow: 0px 0px 40px rgba(72, 119, 159, 0.8);
+}
+
+@media (min-width: 768px) {
+	.header__title {
+		font-size: 42px;
+	}
+	.header__subtitle {
+		font-size: 20px;
+}
+
+@media (min-width: 1200px) {
+	.header__title {
+		font-size: 56px;
+	}
+	.header__subtitle {
+		font-size: 26px;
+	}
 }
