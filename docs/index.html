@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="fonts/noto/noto.css">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css">
     <link type="image/gif" rel="shortcut icon" href="img/favicon/ats.gif" />
     <title>Портфолио</title>
 </head>
@@ -135,39 +136,39 @@
                 <!-- Фильтр работ -->
                 <div class="col padding--none">
                     <h2 class="heading__title heading__title--center">Мои работы</h2>
-                    <div class="filter">
-                        <ul class="filter__block">
-                            <li class="filter__element">
-                                <span class="filter__button filter__button--active">все</span>
+                    <div class="filter-block">
+                        <ul class="filter-block__block">
+                            <li class="filter-block__element">
+                                <span class="filter-block__button filter-block__button--active filter" data-filter="all">все</span>
                             </li>
-                            <li class="filter__element">
-                                <span class="filter__button">html+css</span>
+                            <li class="filter-block__element">
+                                <span class="filter-block__button filter" data-filter=".html-css">html+css</span>
                             </li>
-                            <li class="filter__element">
-                                <span class="filter__button">bootstrap</span>
+                            <li class="filter-block__element">
+                                <span class="filter-block__button filter" data-filter=".bootstrap">bootstrap</span>
                             </li>
-                            <li class="filter__element">
-                                <span class="filter__button">учебные</span>
+                            <li class="filter-block__element">
+                                <span class="filter-block__button filter" data-filter=".tutorial">учебные</span>
                             </li>
-                            <li class="filter__element">
-                                <span class="filter__button">на заказ</span>
+                            <li class="filter-block__element">
+                                <span class="filter-block__button filter" data-filter=".payed">на заказ</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- // Фильтр работ -->
             </div>
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row" id="portfolio-projects">
+                <div class="col-md-4 mix html-css tutorial">
                     <div class="portfolio-item">
-                        <a class="portfolio-item__image">
-                            <div class="portfolio-item__image__hover">
+                        <div class="portfolio-item__image">
+                            <a href="usercontent/img/full/organic.png" class="portfolio-item__image__hover fancybox" rel="group" title="Учебный макет Organica">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                                 <br>
                                 <span>смотреть макет</span>
-                            </div>
+                            </a>
                             <img src="usercontent/img/project_organica.png" alt="Проект Органика">
-                        </a>
+                        </div>
                         <div class="portfolio-item__title">
                             <a href="#">Учебный макет Organica</a>
                         </div>
@@ -176,16 +177,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mix bootstrap tutorial">
                     <div class="portfolio-item">
-                        <a class="portfolio-item__image">
-                            <div class="portfolio-item__image__hover">
+                        <div class="portfolio-item__image">
+                            <a href="usercontent/img/full/apollo.png" class="portfolio-item__image__hover fancybox" rel="group" title="Учебный макет Аполло">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                                 <br>
                                 <span>смотреть макет</span>
-                            </div>
+                            </a>
                             <img src="usercontent/img/project_apolo.png" alt="Проект Органика">
-                        </a>
+                        </div>
                         <div class="portfolio-item__title">
                             <a href="#">Учебный макет Аполло</a>
                         </div>
@@ -194,16 +195,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mix bootstrap tutorial">
                     <div class="portfolio-item">
-                        <a class="portfolio-item__image">
-                            <div class="portfolio-item__image__hover">
+                        <div class="portfolio-item__image">
+                            <a href="usercontent/img/full/portfolio.png" class="portfolio-item__image__hover fancybox" rel="group" title="Личный сайт портфолио">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                                 <br>
                                 <span>смотреть макет</span>
-                            </div>
+                            </a>
                             <img src="usercontent/img/project_portfolio.png" alt="Проект Органика">
-                        </a>
+                        </div>
                         <div class="portfolio-item__title">
                             <a href="#">Личный сайт портфолио</a>
                         </div>
@@ -212,17 +213,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-100"></div>
-                <div class="col-md-4">
+                <div class="col-md-4 mix html-css payed">
                     <div class="portfolio-item">
-                        <a class="portfolio-item__image">
-                            <div class="portfolio-item__image__hover">
+                        <div class="portfolio-item__image">
+                            <a href="usercontent/img/full/car-concept.png" class="portfolio-item__image__hover fancybox" rel="group" title="Промо сайт автомобиля">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                                 <br>
                                 <span>смотреть макет</span>
-                            </div>
+                            </a>
                             <img src="usercontent/img/project_auto.png" alt="Проект Органика">
-                        </a>
+                        </div>
                         <div class="portfolio-item__title">
                             <a href="#">Промо сайт автомобиля</a>
                         </div>
@@ -231,16 +231,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mix bootstrap payed">
                     <div class="portfolio-item">
-                        <a class="portfolio-item__image">
-                            <div class="portfolio-item__image__hover">
+                        <div class="portfolio-item__image">
+                            <a href="usercontent/img/full/motorcycles.jpg" class="portfolio-item__image__hover fancybox" rel="group" title="Магазин мотоциклов">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                                 <br>
                                 <span>смотреть макет</span>
-                            </div>
+                            </a>
                             <img src="usercontent/img/project_moto.png" alt="Проект Органика">
-                        </a>
+                        </div>
                         <div class="portfolio-item__title">
                             <a href="#">Магазин мотоциклов</a>
                         </div>
@@ -249,16 +249,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mix html-css payed">
                     <div class="portfolio-item">
-                        <a class="portfolio-item__image">
-                            <div class="portfolio-item__image__hover">
+                        <div class="portfolio-item__image">
+                            <a href="usercontent/img/full/music.jpg" class="portfolio-item__image__hover fancybox" rel="group" title="Магазин аудиотехники">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                                 <br>
                                 <span>смотреть макет</span>
-                            </div>
+                            </a>
                             <img src="usercontent/img/project_music.png" alt="Проект Органика">
-                        </a>
+                        </div>
                         <div class="portfolio-item__title">
                             <a href="#">Магазин аудиотехники</a>
                         </div>
@@ -320,7 +320,10 @@
     <script src="libs/jquery/jquery-1.11.2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="libs/mixitup2/jquery.mixitup.min.js"></script>
     <script src="libs/pagescroll2id/jquery.malihu.PageScroll2id.js"></script>
+    <script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="libs/fancybox/"></script>
     <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
 
