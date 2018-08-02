@@ -411,13 +411,9 @@ a.resume-button:active {
 
 .portfolio__nav-item {
 	margin: 0 0 25px;
-	padding: 0;	
+	padding: 0;
+	cursor: pointer;
 }
-
-.portfolio__nav-item a {
-	color: #CECECE;
-	text-decoration: none;
-} 
 
 .portfolio__nav-item--button {
 	padding: 7px 26px 6px 21px;
@@ -427,6 +423,8 @@ a.resume-button:active {
 .portfolio__nav-item--button:focus, 
 .portfolio__nav-item--button:active {
 	color: #010101;
+	outline: 2px solid #0052C2;
+	
 
 	padding: 7px 26px 6px 21px;
 }
@@ -473,11 +471,6 @@ a.resume-button:active {
 	border-bottom: 1px dotted #000;
 }
 
-.potfolio__image--text:hover .potfolio__image--text-title,
-.potfolio__image--text:active .potfolio__image--text-title {
-	border-bottom: 1px dotted #0052C2;
-}
-
 .potfolio__image--text {
 	font-size: 14px;
 	font-weight: 400;
@@ -488,6 +481,7 @@ a.resume-button:active {
 .portfolio__image a:focus,
 .portfolio__image a:active {
 	text-decoration: none;
+	border-bottom: 1px dotted #0052C2;
 }
 
 .poftfolio__image--photo-hover {
